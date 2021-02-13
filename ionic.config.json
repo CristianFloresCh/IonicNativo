@@ -1,0 +1,7 @@
+{
+  "name": "nativo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
