@@ -1,3 +1,4 @@
+import { Flashlight } from '@ionic-native/flashlight/ngx';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  encendido:boolean = false;
+  constructor(private flaslight: Flashlight) {}
 
+  encenderLuz(){
+    this.flaslight.toggle();
+    this.encendido = this.flaslight.isSwitchedOn();
+  }
 }
